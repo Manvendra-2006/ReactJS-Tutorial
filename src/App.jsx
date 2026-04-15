@@ -33,3 +33,27 @@
 // // 4. It return parent element
 
 
+import React, { useState } from 'react'
+
+const App = () => {
+  const [state,setstate] = useState(0)
+  function handleInc(){
+    setstate(state+1)
+  }
+  function handleDec(){
+    setstate(state-1)
+  }
+  function hello(){
+    console.log("hello")
+  }
+  hello()
+  return (
+    <div>
+      <h1>{state}</h1>
+      <button onClick={handleInc}>Increment</button>
+      <button onClick={handleDec}>Decrement</button>
+    </div>
+  )
+}
+
+export default App
